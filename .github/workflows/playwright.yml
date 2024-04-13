@@ -15,6 +15,8 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm install -g yarn && yarn
+    - name: Run Nuxt Apps
+      run: yarn run dev & sleep 30s
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
     - name: Run Playwright tests
